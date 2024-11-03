@@ -5,4 +5,4 @@ FROM python:3.8-slim
 RUN pip install pinecone-client
 
 # Simple command to keep the container running
-CMD ["tail", "-f", "/dev/null"]
+CMD ["python3", "server.py"]
