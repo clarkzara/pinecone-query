@@ -1,11 +1,17 @@
-FROM python:3.8-slim
+# Use a lightweight Python image
+FROM python:3.9-slim
 
-# Install pinecone-client
-RUN pip install pinecone-client
+# Install required packages
+RUN pip install flask pinecone-client
 
-# Copy server.py to the working directory
-COPY server.py /app/server.py
+# Set the working directory
 WORKDIR /app
 
-# Command to run the server
-CMD ["python3", "server.py"]
+# Copy the app files into the container
+COPY . /app
+
+# Expose port 8080 to the outside world
+EXPOSE 8080
+
+# Run the Flask app in app.py
+CMD ["python", "app.py"]
