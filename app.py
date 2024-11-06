@@ -1,3 +1,6 @@
+import sys
+print("Python version:", sys.version)
+
 from flask import Flask, request, jsonify
 from pinecone import Pinecone
 from pinecone_plugins.assistant.models.chat import Message  # Adjust if `pinecone_plugins` is the correct module
