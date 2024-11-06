@@ -1,3 +1,4 @@
 flask
 pinecone-client
 pinecone-plugin-assistant
+python-dotenv
